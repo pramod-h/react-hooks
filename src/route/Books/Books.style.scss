@@ -1,0 +1,95 @@
+:root {
+    --background-color: #007bff;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    padding: 3rem 3rem 0;
+    margin: auto;
+    width: 80%;
+    border-spacing: 0;
+    overflow: hidden;
+    border-radius: .4rem;
+}
+
+td,
+th {
+    padding: 15px 20px;
+}
+
+td:nth-child(2) {
+    text-align: center;
+}
+
+th {
+    background-color: var(--background-color);
+    color: #fafafa;
+    font-family: 'Open Sans', Sans-serif;
+    font-weight: 200;
+}
+
+tr {
+    width: 100%;
+    background-color: #fafafa;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+}
+
+tr:nth-child(even) {
+    background-color: #eeeeee;
+}
+
+.pagination-buttons {
+    padding: .5rem 0;
+    display: flex;
+    justify-content: center;
+
+    button {
+        background-color: var(--background-color);
+        border: none;
+        color: #eeeeee;
+        padding: .5rem;
+        border-radius: .2rem;
+        cursor: pointer;
+    }
+
+    & .pervious-button:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+
+    & .current-page {
+        padding: .5rem;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+
+    &-track {
+        background: transparent;
+    }
+
+    &-thumb {
+        background: #aaa;
+
+        &:hover {
+            background: #555;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    table,
+    td,
+    th,
+    tr {
+        padding: 5px;
+        margin: 5px auto;
+    }
+}
